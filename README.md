@@ -1,7 +1,4 @@
-# Source Engine
-[![GitHub Actions Status](https://github.com/nillerusr/source-engine/actions/workflows/build.yml/badge.svg)](https://github.com/nillerusr/source-engine/actions/workflows/build.yml) [![GitHub Actions Status](https://github.com/nillerusr/source-engine/actions/workflows/tests.yml/badge.svg)](https://github.com/nillerusr/source-engine/actions/workflows/tests.yml)
- Discord: [![Discord Server](https://img.shields.io/discord/672055862608658432.svg)](https://discord.gg/hZRB7WMgGw)
- 
+# Source Engine Strike 
 
 Information from [wikipedia](https://wikipedia.org/wiki/Source_(game_engine)):
 
@@ -15,34 +12,45 @@ Source code is based on TF2 2018 leak. Don't use it for commercial purposes.
 This project is using waf buildsystem. If you have waf-related questions look https://waf.io/book
 
 # Features:
-- Android, OSX, FreeBSD, Windows, Linux( glibc, musl ) support
-- Arm support( except windows )
+- Android, OSX, FreeBSD, Windows, Linux support
+- Arm support (except windows)
 - 64bit support
 - Modern toolchains support
 - Fixed many undefined behaviours
-- Touch support( even on windows/linux/osx )
+- Touch support
 - VTF 7.5 support
 - PBR support
-- bsp v19-v21 support( bsp v21 support is partial, portal 2 and csgo maps works fine )
+- bsp v19-v21 support
 - mdl v46-49 support
 - Removed useless/unnecessary dependencies
-- Achivement system working without steam
 - Fixed many bugs
-- Serverbrowser works without steam
+- Server Browser working without steam
 
-# Current tasks
-- Rewrite materialsystem for OpenGL render
-- dxvk-native support
-- Elbrus port
-- Bink audio support( for video_bink )
+# Cooking Book
+1. Download Python 3 and Git if necessary
+2. Clone the repo via git clone --recursive or just download as a zip if you want to
+3. Open a command prompt inside the folder
+4. Type **waf.bat configure -T release --prefix=cstrike --build-games=cstrike --disable-warns**
+   * You can add some additional parameters for example:
+   * **--enable-opus** / activates voice chat, did'nt tested.
+   * **--32-bits** / compiles 32-bit binaries
+   * You can change the build type by just changing **-T release** with **-T debug**
+5. Wait until the command finishes
+6. Type **waf.bat build -p -v** and wait until compiling process being finished
+   * Tooks about 15-20 minutes but it depends on your specs
+7. When everythings done, just enter **waf.bat install** to obtain the game binaries
+   * All the files should be in a folder called "cstrike", inside of the root
+8. Acquire CS:S files and put it into **source-engine-strike\cstrike** except bin files
+9. Download HL2 Pre-anniversary branch and copy the files inside hl2 folder that starts with <b>hl2_misc_***.vpk</b>
+10. Put that files into **source-engine-strike\cstrike\hl2**
+11. Start the game, and have fun!
 
-# How to Build?
-- [Building instructions(EN)](https://github.com/nillerusr/source-engine/wiki/Source-Engine-(EN))
-- [Building instructions(RU)](https://github.com/nillerusr/source-engine/wiki/Source-Engine-(RU))
-
-# Support me
-BTC: `bc1qnjq92jj9uqjtafcx2zvnwd48q89hgtd6w8a6na`
-
-ETH: `0x5d0D561146Ed758D266E59B56e85Af0b03ABAF46`
-
-XMR: `48iXvX61MU24m5VGc77rXQYKmoww3dZh6hn7mEwDaLVTfGhyBKq2teoPpeBq6xvqj4itsGh6EzNTzBty6ZDDevApCFNpsJ`
+## Creating Solution for VS2022
+- Creating a solution is more easier than you think, heres the steps to reproduce:
+1. Open a command prompt inside the repository folder
+2. Type **waf.bat msvs** and wait till you get a success message.
+3. Enter the solution named **source-engine.sln**
+4. Set Startup Project as **hl2_launcher** project
+5. Go into Properties of it
+6. Enter **Debugging** tab and change Command to **$(ProjectDir)\..\cstrike\hl2_launcher.exe**
+   * You can also add launch parameters through the properties.
