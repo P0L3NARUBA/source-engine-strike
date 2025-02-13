@@ -1960,8 +1960,10 @@ void CClientState::ConsistencyCheck(bool bChanged )
 					ConColorMsg( red, "Model %s exceeds mins (%.1f %.1f %.1f vs. %.1f %.1f %.1f)\n", filename,
 						pModel->mins.x, pModel->mins.y, pModel->mins.z,
 						boundsData->mins.x, boundsData->mins.y, boundsData->mins.z);
+					/*
 					errorMsg = "Server is enforcing model bounds";
 					errorFilename = filename;
+					*/
 				}
 				if ( pModel->maxs.x > boundsData->maxs.x ||
 					pModel->maxs.y > boundsData->maxs.y ||
@@ -1970,8 +1972,10 @@ void CClientState::ConsistencyCheck(bool bChanged )
 					ConColorMsg( red, "Model %s exceeds maxs (%.1f %.1f %.1f vs. %.1f %.1f %.1f)\n", filename,
 						pModel->maxs.x, pModel->maxs.y, pModel->maxs.z,
 						boundsData->maxs.x, boundsData->maxs.y, boundsData->maxs.z);
+					/*
 					errorMsg = "Server is enforcing model bounds";
 					errorFilename = filename;
+					*/
 				}
 
 				// Check each texture
@@ -1981,14 +1985,17 @@ void CClientState::ConsistencyCheck(bool bChanged )
 				for ( int j = 0; j<materialCount; ++j )
 				{
 					IMaterial *pMaterial = pMaterials[j];
-
+					
 					if ( !CheckSimpleMaterial( pMaterial ) )
 					{
 						ConColorMsg( red, "Model %s has a bad texture %s\n", filename, pMaterial->GetName() );
+						/*
 						errorMsg = "Server is enforcing simple material";
 						errorFilename = pMaterial->GetName();
 						break;
+						*/
 					}
+					
 				}
 			}
 		}
