@@ -26,7 +26,7 @@ This project is using waf buildsystem. If you have waf-related questions look ht
 - Fixed many bugs
 - Server Browser working without steam
 
-# Cooking Book
+# Cooking Book for Windows
 1. Download Python 3 and Git if necessary
 2. Clone the repo via git clone --recursive or just download as a zip if you want to
 3. Open a command prompt inside the folder
@@ -55,3 +55,6 @@ This project is using waf buildsystem. If you have waf-related questions look ht
 5. Go into Properties of it
 6. Enter **Debugging** tab and change Command to **$(ProjectDir)\..\cstrike\hl2_launcher.exe**
    * You can also add launch parameters through the properties.
+
+### Developing
+- Make sure everytime when you editing the code, you need to type **waf install** to the command prompt to apply the changes.
