@@ -29,6 +29,7 @@ This project is using waf buildsystem. If you have waf-related questions look ht
 # Current tasks
 - Should fix texts
 - Fix fov makes the viewmodel invisible
+- Third Person walking animation broken, needs to be fixed
 
 # Cooking Book for Windows
 1. Download Python 3 and Git if necessary
