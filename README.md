@@ -24,7 +24,7 @@ This project is using waf buildsystem. If you have waf-related questions look ht
 - mdl v46-49 support
 - Removed useless/unnecessary dependencies
 - Fixed many bugs
-- Server Browser working without steam
+- Server Browser and Achievements working without steam
 
 # Cooking Book for Windows
 1. Download Python 3 and Git if necessary
