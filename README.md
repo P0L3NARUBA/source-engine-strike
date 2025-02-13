@@ -43,7 +43,8 @@ This project is using waf buildsystem. If you have waf-related questions look ht
 8. Acquire CS:S files and put it into **source-engine-strike\cstrike** except bin files
 9. Download HL2 Pre-anniversary branch and copy the files inside hl2 folder that starts with <b>hl2_misc_***.vpk</b>
 10. Put that files into **source-engine-strike\cstrike\hl2**
-11. Start the game, and have fun!
+11. Copy **gameinfo.txt** from **cstrike** and paste into **hl2**
+12. Start the game, and have fun!
 
 ## Creating Solution for VS2022
 - Creating a solution is more easier than you think, heres the steps to reproduce:
