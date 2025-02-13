@@ -30,15 +30,15 @@ This project is using waf buildsystem. If you have waf-related questions look ht
 1. Download Python 3 and Git if necessary
 2. Clone the repo via git clone --recursive or just download as a zip if you want to
 3. Open a command prompt inside the folder
-4. Type **waf.bat configure -T release --prefix=cstrike --build-games=cstrike --disable-warns**
+4. Type **waf configure -T release --prefix=cstrike --build-games=cstrike --disable-warns**
    * You can add some additional parameters for example:
    * **--enable-opus** / activates voice chat, did'nt tested.
    * **--32-bits** / compiles 32-bit binaries
    * You can change the build type by just changing **-T release** with **-T debug**
 5. Wait until the command finishes
-6. Type **waf.bat build -p -v** and wait until compiling process being finished
+6. Type **waf build -p -v** and wait until compiling process being finished
    * Tooks about 15-20 minutes but it depends on your specs
-7. When everythings done, just enter **waf.bat install** to obtain the game binaries
+7. When everythings done, just enter **waf install** to obtain the game binaries
    * All the files should be in a folder called "cstrike", inside of the root
 8. Acquire CS:S files and put it into **source-engine-strike\cstrike** except bin files
 9. Download HL2 Pre-anniversary branch and copy the files inside hl2 folder that starts with <b>hl2_misc_***.vpk</b>
@@ -48,7 +48,7 @@ This project is using waf buildsystem. If you have waf-related questions look ht
 ## Creating Solution for VS2022
 - Creating a solution is more easier than you think, heres the steps to reproduce:
 1. Open a command prompt inside the repository folder
-2. Type **waf.bat msvs** and wait till you get a success message.
+2. Type **waf msvs** and wait till you get a success message.
 3. Enter the solution named **source-engine.sln**
 4. Set Startup Project as **hl2_launcher** project
 5. Go into Properties of it
