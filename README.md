@@ -26,6 +26,10 @@ This project is using waf buildsystem. If you have waf-related questions look ht
 - Fixed many bugs
 - Server Browser and Achievements working without steam
 
+# Current tasks
+- Should fix texts
+- Fix fov makes the viewmodel invisible
+
 # Cooking Book for Windows
 1. Download Python 3 and Git if necessary
 2. Clone the repo via git clone --recursive or just download as a zip if you want to
