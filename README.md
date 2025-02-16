@@ -27,7 +27,7 @@ This project is using waf buildsystem. If you have waf-related questions look ht
 - Server Browser and Achievements working without steam
 
 # Current tasks
-- Should fix texts
+- Should fix the texts
 - Fix fov makes the viewmodel invisible
 - Third Person walking animation broken, needs to be fixed.
 
